@@ -4,6 +4,7 @@ platform :ios do
   desc "Export ipa"
   lane :export_ipa do
     keychain_password = SecureRandom.uuid
+    puts "Start"
     create_keychain(
       name: "ios-build.keychain",
       password: keychain_password,
@@ -55,7 +56,6 @@ platform :ios do
     )
     update_project_team(
       path: ENV["PROJECT_PATH"],
-aa
       teamid: "",
       targets: "UnityFramework"
     )
