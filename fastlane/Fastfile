@@ -55,6 +55,7 @@ platform :ios do
     )
     update_project_team(
       path: ENV["PROJECT_PATH"],
+aa
       teamid: "",
       targets: "UnityFramework"
     )
