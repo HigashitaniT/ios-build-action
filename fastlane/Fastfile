@@ -53,6 +53,11 @@ platform :ios do
       path: ENV["PROJECT_PATH"],
       teamid: ENV["TEAM_ID"]
     )
+    update_project_team(
+      path: ENV["PROJECT_PATH"],
+      teamid: "",
+      targets: "UnityFramework"
+    )
     if ENV["BUILD_PODS"] == 'true'
       cocoapods(
         podfile: ENV["PODS_PATH"]
